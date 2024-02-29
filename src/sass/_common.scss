@@ -1,1 +1,49 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+@import '~node_modules/modern-normalize/modern-normalize.css'; 
+
+nav{ 
+    background-color: blueviolet; 
+    width: 100%; 
+    height: 80px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+} 
+ 
+ 
+.load-more{ 
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+} 
+
+.gallery{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 10px;
+ 
+}  
+
+.photo-card{ 
+    border: 5px solid red;  
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 294px;
+    margin: 0 auto;
+}
+.block-size{ 
+    width: 100%; 
+    height: 80%; 
+    border: 2px solid black;
+}  
+
+.photo-card-img{ 
+    max-width: 100%; 
+    height: auto;
+}
+ 
+.info{ 
+    display: flex; 
+
+}
