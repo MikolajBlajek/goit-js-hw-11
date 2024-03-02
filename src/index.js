@@ -62,7 +62,7 @@ const fetchAndRenderImg = async currentPage => {
     const images = await fetchImg(currentPage);
     gallery.innerHTML += images
       .map(
-        item => `
+        item => ` 
         <div class="photo-card"> 
           <div class="block-size">
           <a href="${item.largeImageURL}" data-lightbox="gallery">
@@ -83,6 +83,10 @@ const fetchAndRenderImg = async currentPage => {
     const lightbox = new SimpleLightbox('.gallery a');
 
     lightbox.refresh();
+
+    if (images.length === 0) {
+      loadMore.hidden = true;
+    }
   } catch (error) {
     Notiflix.Notify.failure(error.message);
   }
@@ -92,7 +96,7 @@ form.addEventListener('submit', async e => {
   e.preventDefault();
   page = 1;
   gallery.innerHTML = '';
-  fetchAndRenderImg(page);
+  await fetchAndRenderImg(page);
 });
 
 loadMore.addEventListener('click', () => {
