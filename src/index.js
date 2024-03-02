@@ -7,7 +7,7 @@ const form = document.querySelector('#search-form');
 const input = document.querySelector('input');
 const apiKey = '42631072-6b0d19ed7a3e888324b209d49';
 const gallery = document.querySelector('.gallery');
-const loadMore = document.querySelector('.load-more');
+const loadMore = document.querySelector('.button-container');
 
 let page = 1;
 
